@@ -3,9 +3,9 @@ package Fibo;
 public class FibonacciSolution {
 
 	public long check(int i) {
-		long[] fib = new long[i + 1];
 		if (i <= 0)
 			return 0;
+		long[] fib = new long[i + 1];
 		return check2(i, fib);
 
 	}
