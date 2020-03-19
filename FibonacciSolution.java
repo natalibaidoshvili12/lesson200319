@@ -1,21 +1,24 @@
 package Fibo;
 
 public class FibonacciSolution {
-	static int[] fib;
 
-	public int check(int i) {
-		return check2(i);
+	public long check(int i) {
+		long[] fib = new long[i];
+		return check2(i, fib);
+
 	}
 
-	public int check2(int i) {
-		fib = new int[i];
-		for (int j = 0; j < i; j++) {
-			if (j <= 1)
-				fib[j] = j;
-			else
-				fib[j] = fib[j - 1] + fib[j - 2];
+	public long check2(int i, long fib[]) {
+		if (i <= 0)
+			return 0;
+		if (i == 1) {
+			fib[i - 1] = 0;
+		} else if (i == 2) {
+			fib[i - 1] = 1;
+		} else {
+			fib[i - 1] = check2(i - 1, fib) + check2(i - 2, fib);
 		}
-		return fib[i-1];
+		return fib[i - 1];
 	}
 
 }
