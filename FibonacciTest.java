@@ -8,6 +8,13 @@ public class FibonacciTest {
 	@Test
 	public void test() {
 		FibonacciSolution fibo = new FibonacciSolution();
+		long ch = fibo.check(-3);
+		assertEquals(0, ch);
+	}
+
+	@Test
+	public void test1() {
+		FibonacciSolution fibo = new FibonacciSolution();
 		long ch = fibo.check(1);
 		assertEquals(0, ch);
 	}
@@ -38,5 +45,26 @@ public class FibonacciTest {
 		FibonacciSolution fibo = new FibonacciSolution();
 		long ch = fibo.check(5);
 		assertEquals(3, ch);
+	}
+
+	@Test
+	public void test6() {
+		FibonacciSolution fibo = new FibonacciSolution();
+		long ch = fibo.check(6);
+		assertEquals(5, ch);
+	}
+
+	@Test
+	public void test7() {
+		FibonacciSolution fibo = new FibonacciSolution();
+		long ch = fibo.check(7);
+		assertEquals(8, ch);
+	}
+
+	@Test
+	public void test8() {
+		FibonacciSolution fibo = new FibonacciSolution();
+		long ch = fibo.check(8);
+		assertEquals(13, ch);
 	}
 }
